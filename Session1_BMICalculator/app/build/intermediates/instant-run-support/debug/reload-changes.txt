@@ -1,0 +1,4 @@
+CHANGED,C:\Users\giaqu\AndroidStudioProjects\Session1_BMICalculator\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\quyntg\vn\session1_bmicalculator\MainActivity$override.class
+CHANGED,C:\Users\giaqu\AndroidStudioProjects\Session1_BMICalculator\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\quyntg\vn\session1_bmicalculator\R$id$override.class
+CHANGED,C:\Users\giaqu\AndroidStudioProjects\Session1_BMICalculator\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\android\tools\fd\runtime\AppPatchesLoaderImpl.class
+CHANGED,C:\Users\giaqu\AndroidStudioProjects\Session1_BMICalculator\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\quyntg\vn\session1_bmicalculator\R$layout$override.class
