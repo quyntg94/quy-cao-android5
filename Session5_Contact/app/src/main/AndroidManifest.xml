@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="quyntg.vn.session5_contact">
+    package="quyntg.vn.session5_contact"
+    android:installLocation="auto">
 
     <application
         android:allowBackup="true"

@@ -62,11 +62,11 @@ public class Contact implements Serializable{
         this.link = link;
     }
 
-    public Contact(String title, String link, String phone) {
+    public Contact(String title, String phone, String link) {
 
         this.title = title;
-        this.link = link;
         this.phone = phone;
+        this.link = link;
     }
 
     @Override

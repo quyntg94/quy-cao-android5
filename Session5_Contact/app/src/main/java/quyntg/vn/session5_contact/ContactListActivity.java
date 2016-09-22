@@ -8,6 +8,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.FrameLayout;
 import android.widget.ListView;
 
 import java.util.List;
@@ -17,6 +18,7 @@ public class ContactListActivity extends AppCompatActivity {
     private List<Contact> contactList;
 
     private ListView lvContact;
+    private FrameLayout flContact;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,6 +36,8 @@ public class ContactListActivity extends AppCompatActivity {
 
     private void getReferences() {
         lvContact = (ListView) findViewById(R.id.lv_contact);
+        flContact = (FrameLayout) findViewById(R.id.fl_contact_default);
+
     }
 
     private void initData() {
@@ -57,30 +61,25 @@ public class ContactListActivity extends AppCompatActivity {
             public void onItemClick(AdapterView<?> adapterView, View view, int position, long id) {
                 Contact contact = contactList.get(position);
 
-                if(findViewById(R.id.fl_container) == null) {
-                    //Large and Normal Screen
-                    Intent intent = new Intent(ContactListActivity.this, ContactDetailActivity.class);
+                ContactDetailFragment contactDetailFragment = new ContactDetailFragment();
+                contactDetailFragment.setContact(contact);
 
-                    intent.putExtra(ContactDetailActivity.EXTRA_CONTACT, contact);
-
-                    startActivity(intent);
-                } else {
-                    //Xlarge Screen
-                    ContactDetailFragment contactDetailFragment = new ContactDetailFragment();
-                    contactDetailFragment.setContact(contact);
-
-                    //1
-                    FragmentManager fragmentManager = getSupportFragmentManager();
-                    //2
-                    FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-
+                //1
+                FragmentManager fragmentManager = getSupportFragmentManager();
+                //2
+                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+                if(flContact != null){
+                    fragmentTransaction.add(R.id.fl_contact_default, contactDetailFragment);
+                }else {
                     fragmentTransaction.replace(R.id.fl_container, contactDetailFragment);
-                    //3
-                    fragmentTransaction.addToBackStack(null);
-                    //4
-                    fragmentTransaction.commit();
                 }
+                //3
+                fragmentTransaction.addToBackStack(null);
+                //4
+                fragmentTransaction.commit();
+
             }
         });
+
     }
 }

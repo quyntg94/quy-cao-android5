@@ -40,20 +40,20 @@ public class ContactDetailFragment extends Fragment {
     }
 
     private void addListeners() {
-        tvPhone.setOnClickListener(new View.OnClickListener() {
+        tvLink.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 //Implicit Intent
-                String link = String.format("%s", contact.getPhone());
+                String link = String.format("%s", contact.getLink());
 
                 Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(link));
                 startActivity(intent);
             }
         });
-        tvLink.setOnClickListener(new View.OnClickListener() {
+        tvPhone.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String phone = String.format("tel: " + contact.getLink().trim());
+                String phone = String.format("tel: " + contact.getPhone().trim());
                 Intent intent = new Intent(Intent.ACTION_DIAL);
                 intent.setData(Uri.parse(phone));
                 startActivity(intent);
