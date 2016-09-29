@@ -1,0 +1,123 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="quyntg.vn.session7_lab.BlankFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <TextView
+        android:id="@+id/ftv0"
+        android:text="Chose color and size"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:textSize="25dp"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/ftv1"
+        android:layout_below="@+id/ftv0"
+        android:text="Colors"
+        android:textColor="@color/black"
+        android:textSize="15dp"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <RelativeLayout
+        android:id="@+id/fllcolor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ftv1"
+        >
+
+        <ImageView
+            android:id="@+id/fiv21"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/fiv22"
+            android:layout_marginRight="20dp"
+            />
+        <ImageView
+            android:id="@+id/fiv22"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:paddingRight="50dp"/>
+        <ImageView
+            android:id="@+id/fiv23"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:paddingLeft="50dp"/>
+        <ImageView
+            android:id="@+id/fiv24"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/fiv23"
+            android:layout_marginLeft="20dp"/>
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/ftv2"
+        android:layout_below="@+id/fllcolor"
+        android:text="Sizes"
+        android:textColor="@color/black"
+        android:textSize="15dp"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <RelativeLayout
+        android:id="@+id/fllsize"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:layout_below="@+id/ftv2"
+        android:layout_marginTop="15dp">
+
+        <ImageView
+            android:id="@+id/fiv31"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_toLeftOf="@+id/fiv32"
+            android:layout_marginRight="20dp"
+            />
+        <ImageView
+            android:id="@+id/fiv32"
+            android:background="@drawable/circle"
+            android:padding="5dp"
+            android:layout_width="20dp"
+            android:layout_height="match_parent"
+            android:layout_toLeftOf="@+id/fiv33"
+            android:paddingRight="20dp"
+            />
+        <ImageView
+            android:id="@+id/fiv33"
+            android:layout_width="wrap_content"
+            android:paddingLeft="30dp"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            />
+        <ImageView
+            android:id="@+id/fiv34"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@+id/fiv33"
+            android:layout_marginLeft="20dp"/>
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/fiv4"
+        android:layout_below="@+id/fllsize"
+        android:layout_marginTop="10dp"
+        android:padding="15dp"
+        android:background="@color/lightRed"
+        android:layout_margin="10dp"
+        android:layout_centerInParent="true"
+        android:layout_width="match_parent"
+        android:layout_height="50dp" />
+</RelativeLayout>
