@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="ValueTextView">
+        <attr name="value" format="integer"/>
+    </declare-styleable>
+    <declare-styleable name="LabelTextView">
+        <attr name="label" format="string"/>
+    </declare-styleable>
+</resources>
