@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:adjustViewBounds="true"
+                    android:id="@+id/iv_0702"
+                    android:layout_gravity="top"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/news_items_details_image0702"/>
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/iv1"
+                    android:padding="20dp"
+                    android:src="@drawable/ic_arrow_back_white_24dp"/>
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/iv2"
+                    android:padding="20dp"
+                    android:layout_alignParentRight="true"
+                    android:src="@drawable/ic_share_white_24dp"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/rl0702"
+                android:background="@color/censored"
+                android:layout_width="match_parent"
+                android:layout_height="100dp">
+                
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tv1"
+                    android:text="Synth polaroid bitters chill wave pickled. Vegan disrupt!"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:paddingTop="10dp"
+                    android:textSize="25dp"
+                    android:textColor="#FFFFFF"
+                    />
+                <TextView
+                    android:id="@+id/tv2"
+                    android:layout_below="@id/tv1"
+                    android:text="19 Jul"
+                    android:textSize="10dp"
+                    android:paddingLeft="20dp"
+                    android:paddingTop="5dp"
+                    android:textColor="@color/gray"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </RelativeLayout>
+                
+            
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="It was a humorously perilous business for both of us. For, before we proceed further, it must be said that the monkey-rope was fast at both ends; fast to Queequeg's broad canvas belt, and fast to my narrow leather one. So that for better or for worse, we two, for the time, were wedded; and should poor Queequeg sink to rise no more, then both usage and honour demanded, that instead of cutting the cord, it should drag me down in his wake. So, then, an elongated Siamese ligature united us. Queequeg was my own inseparable twin brother; nor could I any way get rid of the dangerous liabilities which the hempen bond entailed."
+                android:background="#FFFFFF"
+                android:padding="20dp"
+                android:textStyle="bold"
+                />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
