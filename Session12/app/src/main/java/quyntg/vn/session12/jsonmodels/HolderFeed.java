@@ -9,8 +9,10 @@ import java.util.List;
  * Created by giaqu on 10/14/2016.
  */
 public class HolderFeed {
-    @SerializedName("id") private ArrayList<HolderItem> id;
-    @SerializedName("title") private String title;
+    @SerializedName("id")
+    private ArrayList<HolderItem> id;
+    @SerializedName("title")
+    private String title;
 
 
     public String getTitle() {

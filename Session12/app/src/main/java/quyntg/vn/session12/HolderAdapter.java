@@ -7,8 +7,6 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.TextView;
 
-import java.util.List;
-
 import quyntg.vn.session12.jsonmodels.HolderItem;
 
 /**
@@ -16,7 +14,7 @@ import quyntg.vn.session12.jsonmodels.HolderItem;
  */
 public class HolderAdapter extends ArrayAdapter<HolderItem> {
 
-    public HolderAdapter(Context context, int resource, List<HolderItem> objects) {
+    public HolderAdapter(Context context, int resource, HolderItem[] objects) {
         super(context, resource, objects);
     }
 

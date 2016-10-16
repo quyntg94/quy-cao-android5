@@ -9,7 +9,6 @@ import com.google.gson.Gson;
 
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.List;
 
 import okhttp3.Call;
 import okhttp3.Callback;
@@ -17,7 +16,6 @@ import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.Response;
 import quyntg.vn.session12.jsonmodels.FlickrItem;
-import quyntg.vn.session12.jsonmodels.HolderFeed;
 import quyntg.vn.session12.jsonmodels.HolderItem;
 
 public class MainActivity extends AppCompatActivity {
@@ -25,7 +23,6 @@ public class MainActivity extends AppCompatActivity {
     private ListView lvflickr;
     private ArrayAdapter<FlickrItem> feedArrayAdapter;
     private ArrayList<FlickrItem> flickrItems;
-    private ArrayList<HolderItem> holderItems;
     private static final String TAG = MainActivity.class.toString();
 
     @Override
@@ -66,28 +63,28 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onResponse(Call call, Response response) throws IOException {
 //                String body = response.body().string().replace("jsonFlickrFeed(","").replace("})", "}");
-                String bodyString = response.body().string();
+//                String bodyString = response.body().string().replace("[","").replace("]","");
 
+
+                String bodyString = response.body().string();
+                if(bodyString != null){
+                    final HolderItem[] holderItems  = new Gson().fromJson(bodyString, HolderItem[].class);
+
+                    MainActivity.this.runOnUiThread(new Runnable() {
+                        @Override
+                        public void run() {
+//
+//                        lvflickr.setAdapter(new FlickrAdapter(getBaseContext(), R.layout.listview, flickrItems));
+                            lvflickr.setAdapter(new HolderAdapter(getBaseContext(), R.layout.listview_, holderItems));
+
+//                        }
+                        }
+                    });
+                }
 //                final FlickrFeed flickrFeed = new Gson().fromJson(body, FlickrFeed.class);
 //
 //                final List<FlickrItem> flickrItems = flickrFeed.getItems();
 
-                final HolderFeed holderFeed = new Gson().fromJson(bodyString, HolderFeed.class);
-
-                final List<HolderItem> holderItems = holderFeed.getId();
-                MainActivity.this.runOnUiThread(new Runnable() {
-                    @Override
-                    public void run() {
-//                        for(FlickrItem items : flickrFeed.getItems()){
-//                            Log.d(TAG, items.getImageLink());
-//                            flickrItems.add(items);
-//                            feedArrayAdapter.notifyDataSetChanged();
-//                        lvflickr.setAdapter(new FlickrAdapter(getBaseContext(), R.layout.listview, flickrItems));
-                        lvflickr.setAdapter(new HolderAdapter(getBaseContext(), R.layout.listview_, holderItems));
-
-//                        }
-                    }
-                });
 //                Log.d(TAG, flickrFeed.getTitle());
             }
         });
